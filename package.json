@@ -1,12 +1,26 @@
 {
   "name": "deskpulse",
   "version": "1.0.0",
-  "description": "",
+  "description": "DeskPulse desktop task widget",
   "main": "electron/main.js",
-   "scripts": {
-  "start": "electron ."
-}
-  ,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.deskpulse.app",
+    "productName": "DeskPulse",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
 }

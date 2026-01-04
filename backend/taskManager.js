@@ -1,11 +1,36 @@
+const { app } = require('electron');
 const fs = require('fs');
 const path = require('path');
 
-const dataPath = path.join(__dirname, '../data/data.json');
+const dataDir = app.getPath('userData');
+const dataPath = path.join(dataDir, 'data.json');
 
 /* ---------- helpers ---------- */
 
+function ensureDataFile() {
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+
+  if (!fs.existsSync(dataPath)) {
+    fs.writeFileSync(
+      dataPath,
+      JSON.stringify(
+        {
+          today: {
+            date: null,
+            tasks: []
+          }
+        },
+        null,
+        2
+      )
+    );
+  }
+}
+
 function readData() {
+  ensureDataFile();
   return JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 }
 
