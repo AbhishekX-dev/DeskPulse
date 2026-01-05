@@ -6,12 +6,16 @@ It’s not a full task manager  it’s a quiet reminder that lives on your deskt
 **No logins. No dashboards. No distractions.**
 
 ---
+**DeskPulse** fixes this by behaving like a desktop widget instead of a traditional app. Your tasks stay visible while you work.
+
+https://github.com/user-attachments/assets/88ee360a-96be-480a-88e8-c92f0c592181
+
 
 ## The problem it solves
 Most to-do apps fail because they disappear.  
 You open them, add tasks, close the app and forget about them for the rest of the day.
 
-**DeskPulse** fixes this by behaving like a desktop widget instead of a traditional app. Your tasks stay visible while you work.
+
 
 ## What DeskPulse does
 *  **Runs as a desktop widget**
